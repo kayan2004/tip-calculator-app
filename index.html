@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        SPLI <br />
+        TTER
+      </h1>
+    </header>
+    <main>
+      <form novalidate action="">
+        <div class="input-label_container">
+          <div class="label-message_container">
+            <label for="amount">Bill</label>
+            <p class="error-message hidden">Can't be zero</p>
+          </div>
+          <div class="input_wrapper">
+            <input id="amount" type="number" placeholder="0" />
+          </div>
+        </div>
+        <div class="input-label_container">
+          <label id="button-label" for="buttons_container">
+            Select Tip %
+          </label>
+          <div id="buttons_container">
+            <button class="tip_button" value="5">5%</button>
+            <button class="tip_button" value="10">10%</button>
+            <button class="tip_button" value="15">15%</button>
+            <button class="tip_button" value="25">25%</button>
+            <button class="tip_button" value="50">50%</button>
+            <input id="custom-input" type="number" placeholder="Custom" />
+          </div>
+        </div>
+        <div class="input-label_container">
+          <div class="label-message_container">
+            <label for="amount">Number of People</label>
+            <p class="error-message hidden">Can't be zero</p>
+          </div>
+          <div id="numOfPeople_input-wrapper" class="input_wrapper">
+            <input
+              id="numOfPeople"
+              type="number"
+              placeholder="0"
+              step="1"
+              min="0"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="results_container">
+        <div class="results">
+          <label class="results-label" for="tip-amount">Tip Amount</label>
+          <span id="tip-amount">$0.00</span>
+        </div>
+        <div class="results">
+          <label class="results-label" for="total">Total</label>
+          <span id="total">$0.00</span>
+        </div>
+        <button type="reset" id="reset-button">RESET</button>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kayan</a>.
+    </footer>
+  </body>
+</html>
